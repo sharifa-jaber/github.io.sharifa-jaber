@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شريفة | مهندسة روبوتات</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #0b0b12;
+      color: #f5f3ff;
+      line-height: 1.8;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      border-bottom: 1px solid #292638;
+    }
+
+    .logo {
+      color: #c4a7ff;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #ded9eb;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #c4a7ff;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(ellipse at top, #292044 0%, #0b0b12 65%);
+    }
+
+    .tag {
+      border: 1px solid #7d5ac7;
+      color: #c4a7ff;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 68px);
+      margin-bottom: 15px;
+    }
+
+    h1 span {
+      color: #c4a7ff;
+    }
+
+    .hero p {
+      color: #b9b4c8;
+      max-width: 570px;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: #a985f5;
+      color: #100c19;
+    }
+
+    .secondary {
+      border: 1px solid #615579;
+      color: #f5f3ff;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      opacity: 0.85;
+    }
+
+    section {
+      padding: 65px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      text-align: center;
+      color: #aaa4bb;
+      margin-bottom: 35px;
+    }
+
+    .about {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      color: #c8c2d5;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #15141f;
+      border: 1px solid #30283f;
+      border-radius: 16px;
+      padding: 25px 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      border-color: #a985f5;
+      transform: translateY(-5px);
+    }
+
+    .card .icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #d5c2ff;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #aaa4bb;
+      font-size: 14px;
+    }
+
+    .contact {
+      background: #111019;
+    }
+
+    .contact-grid {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .contact-card {
+      background: #1a1725;
+      border: 1px solid #393047;
+      padding: 24px;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 8px;
+      color: #c4a7ff;
+    }
+
+    .contact-card p {
+      color: #c7c0d5;
+      overflow-wrap: anywhere;
+      margin-bottom: 12px;
+    }
+
+    .contact-card a {
+      color: #d7c4ff;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #8e879f;
+      font-size: 13px;
+      border-top: 1px solid #292638;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      section {
+        padding: 48px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">SHARIFA.</div>
+    <nav>
+      <a href="#about">من أنا</a>
+      <a href="#skills">مهاراتي</a>
+      <a href="#contact">تواصلي معي</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="tag">Robotics Engineer | مهندسة روبوتات</div>
+
+      <h1>مرحباً، أنا <span>شريفة</span></h1>
+
+      <p>
+        شغوفة بعالم الروبوتات والتقنيات الذكية،
+        وأسعى إلى تحويل الأفكار المبتكرة إلى حلول
+        تقنية تصنع فرقاً في المستقبل.
+      </p>
+
+      <div class="buttons">
+        <a href="#contact" class="btn primary">تواصلي معي</a>
+        <a href="#skills" class="btn secondary">اكتشفي مهاراتي</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">من أنا؟</h2>
+      <p class="section-desc">التقنية شغف، والابتكار أسلوب حياة.</p>
+
+      <div class="about">
+        أنا شريفة، مهندسة روبوتات مهتمة بالأنظمة الذكية
+        والأتمتة والبرمجة. أؤمن بأن الهندسة ليست مجرد
+        بناء آلات، بل ابتكار حلول تساعد الإنسان وتطوّر المستقبل.
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">مهاراتي واهتماماتي</h2>
+      <p class="section-desc">مجالات أطمح إلى الإبداع والتطور فيها</p>
+
+      <div class="skills">
+        <div class="card">
+          <div class="icon">🤖</div>
+          <h3>الروبوتات</h3>
+          <p>تصميم الأنظمة الروبوتية وتطويرها.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">💻</div>
+          <h3>البرمجة</h3>
+          <p>تطوير البرامج والحلول التقنية.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚙️</div>
+          <h3>الأتمتة</h3>
+          <p>تطوير العمليات والأنظمة الذكية.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🧠</div>
+          <h3>الذكاء الاصطناعي</h3>
+          <p>استكشاف التقنيات الذكية وتطبيقاتها.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">لنتواصل معاً</h2>
+      <p class="section-desc">
+        للاستفسارات والتعاون والفرص المهنية
+      </p>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <h3>📱 رقم الجوال</h3>
+          <p> </p>
+          <a href="tel:+9665XXXXXXXX">اتصال مباشر</a>
+        </div>
+
+        <div class="contact-card">
+          <h3>✉️ البريد الإلكتروني</h3>
+          <p>sharifajaber1111@gmail.com </p>
+          <a href="mailto:your@email.com">إرسال بريد</a>
+        </div>
+
+        <div class="contact-card">
+          <h3>💼 LinkedIn</h3>
+          <p>ملفي المهني</p>
+          <a href="https://www.linkedin.com/"
+             target="_blank" rel="noopener noreferrer">
+            زيارة حسابي
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <h3>💬 WhatsApp</h3>
+          <p>تواصلي معي مباشرة</p>
+          <a href="https://wa.me/9665XXXXXXXX"
+             target="_blank" rel="noopener noreferrer">
+            محادثة واتساب
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Sharifa | Robotics Engineer
+    <br>
+    صُنع بشغف نحو المستقبل ✨
+  </footer>
+
+</body>
+</html>
